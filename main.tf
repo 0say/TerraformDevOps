@@ -1,5 +1,13 @@
 # Provider configuration
 terraform {
+
+# Add this backend block
+  backend "s3" {
+    bucket = "ed-tf-state-20250718" 
+    key    = "global/s3/terraform.tfstate"
+    region = "us-east-1"
+  }
+
   required_version = ">= 1.0"
   required_providers {
     aws = {
