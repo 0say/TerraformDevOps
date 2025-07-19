@@ -3,7 +3,7 @@ terraform {
 
 # Add this backend block
   backend "s3" {
-    bucket = "ed-tf-state-20250718" 
+    bucket = "bernardos-terraform-state-20250718" 
     key    = "global/s3/terraform.tfstate"
     region = "us-east-1"
   }
